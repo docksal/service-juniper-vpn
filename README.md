@@ -1,4 +1,4 @@
-# Juniper / Pulse Secure VPN image for Docksal
+# Juniper / Pulse Secure VPN client image for Docksal
 
 Connects to Juniper / Pulse Secure VPN using the legacy Network Connect (ncsvc) client, which works on Linux.  
 Provides access to the remote network by running Socks5 (port `1080`) and HTTP/HTTPS (port `8080`) proxies.   
