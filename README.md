@@ -28,9 +28,9 @@ Download the sample [juniper-vpn-wrap.conf](juniper-vpn-wrap.conf) and store it 
 ## Running as a standalone container
 
 ```bash
-docker run -d --name=jvpn --restart=failure \
+docker run -d --name=juniper-vpn \
 	-p 127.0.0.1:1080:1080 -p 127.0.0.1:8080:8080 \
-	-v /path/to/vpn.conf:/root/.juniper_networks/juniper-vpn-wrap.conf \
+	-v /path/to/juniper-vpn-wrap.conf:/root/.juniper_networks/juniper-vpn-wrap.conf \
 	docksal/juniper-vpn
 ```
 
@@ -51,7 +51,7 @@ HTTP/HTTPS:	`127.0.0.1:8080`
       - 127.0.0.1:1080:1080
       - 127.0.0.1:8080:8080
     volumes:
-      - /path/to/vpn.conf:/root/.juniper_networks/juniper-vpn-wrap.conf
+      - /path/to/juniper-vpn-wrap.conf:/root/.juniper_networks/juniper-vpn-wrap.conf
 ```
 
 Replace `/path/to/vpn.conf` with the actual path to the `vpn.conf` file.
@@ -81,8 +81,8 @@ curl --proxy socks5h://127.0.0.1:1080 https://ifconfig.co
 Most console tools can pick up the HTTP/HTTPS proxy configuration from the environment: 
 
 ```bash
-export http_proxy=127.0.0.1:8080
-export https_proxy=127.0.0.1:8080
+export http_proxy=http://127.0.0.1:8080
+export https_proxy=http://127.0.0.1:8080
 ```
 
 This works with `curl`, `composer`, git (`https://` schema only) and others.
