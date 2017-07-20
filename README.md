@@ -10,8 +10,6 @@ This image(s) is part of the [Docksal](http://docksal.io) image library.
 
 VPN connection settings are passed via a configuration file.
 
-**vpn.conf**
-
 ```
 [vpn]
 host = vpn.example.com
@@ -22,7 +20,7 @@ socks_port = 1081
 host_checker = 1
 ```
 
-Download the sample [juniper-vpn-wrap.conf](juniper-vpn-wrap.conf) and store it somewhere (e.g. `~/juniper-vpn-wrap.conf`).
+Download a sample [juniper-vpn-wrap.conf](juniper-vpn-wrap.conf) and store it somewhere (e.g. `~/juniper-vpn-wrap.conf`).
 
 
 ## Running as a standalone container
@@ -54,7 +52,7 @@ HTTP/HTTPS:	`127.0.0.1:8080`
       - /path/to/juniper-vpn-wrap.conf:/root/.juniper_networks/juniper-vpn-wrap.conf
 ```
 
-Replace `/path/to/vpn.conf` with the actual path to the `vpn.conf` file.
+Replace `/path/to/juniper-vpn-wrap.conf` with the actual path to the `juniper-vpn-wrap.conf` file.
 
 Proxy endpoints to use by project containers:
 
