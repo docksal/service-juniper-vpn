@@ -1,6 +1,6 @@
 # Juniper / Pulse Secure VPN client
 
-Juniper / Pulse Secure VPN client packaged in a Docker image, thus can be used anywhere with Docker (Linux, macOS, Windows).
+Juniper / Pulse Secure VPN client packaged as a Docker image, thus can be used anywhere with Docker (Linux, macOS, Windows).
 
 Uses the legacy Network Connect (ncsvc) client, which works on Linux.
 Provides access to the remote network by running Socks5 (port `1080`) and HTTP/HTTPS (port `8080`) proxies.   
