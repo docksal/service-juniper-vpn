@@ -98,7 +98,7 @@ This will tell the ssh client (and thus git over ssh) to use the socks5 proxy to
 
 ## Credits
 
-This image is based on [russdill/ncsvc-socks-wrapper](https://github.com/russdill/russdill/ncsvc-socks-wrapper).  
+This image is based on [russdill/ncsvc-socks-wrapper](https://github.com/russdill/ncsvc-socks-wrapper).  
 
 
 ## Limitations and customizations
