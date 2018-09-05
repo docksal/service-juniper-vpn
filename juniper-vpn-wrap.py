@@ -222,7 +222,8 @@ class juniper_vpn_wrapper(object):
         self.br.select_form(nr=0)
         self.br.form['username'] = self.username
         self.br.form['password'] = self.password
-        self.br.form['password#2'] = self.password2
+        if self.password2 and 'password#2' in self.br.form:
+            self.br.form['password#2'] = self.password2
         # Untested, a list of availables realms is provided when this
         # is necessary.
         # self.br.form['realm'] = [realm]
@@ -418,6 +419,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     password = None
+    password2 = None
     oath = None
 
     if args.config is not None:
@@ -438,7 +440,7 @@ if __name__ == "__main__":
         try:
             password2 = config.get('vpn', 'password2')
         except:
-            pass
+            password2 = None
         try:
             oath = config.get('vpn', 'oath')
         except:
