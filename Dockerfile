@@ -1,4 +1,4 @@
-# Using 32bit Ubuntu image as we have to complile an use 32bit stuff here.
+# Using a 32bit Ubuntu image as we have to complile and use 32bit stuff here.
 FROM ioft/i386-ubuntu:16.04
 
 # Unlike ENV, ARG does not carry over into the image and only affects the build, which is what we want.

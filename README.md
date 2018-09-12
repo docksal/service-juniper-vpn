@@ -2,15 +2,17 @@
 
 Juniper / Pulse Secure VPN client packaged as a Docker image, thus can be used anywhere with Docker (Linux, macOS, Windows).
 
-Uses the legacy Network Connect (ncsvc) client, which works on Linux.
-Provides access to the remote network by running Socks5 (port `1080`) and HTTP/HTTPS (port `8080`) proxies.   
+Uses the legacy Network Connect (`ncsvc`) client, which works on Linux.
+
+Instead of joining the host machine into the VPN network (which is often not desirable), exposes access to the network 
+via Socks5 (port `1080`) and HTTP/HTTPS (port `8080`) proxies.
 
 This image(s) is part of the [Docksal](http://docksal.io) image library.
 
 
 ## Configuration
 
-VPN connection settings are passed via a configuration file.
+VPN connection settings are passed via a configuration file:
 
 ```
 [vpn]
@@ -107,7 +109,7 @@ This image is based on [russdill/ncsvc-socks-wrapper](https://github.com/russdil
 
 This image was created to work with a particular VPN server and may not work with other Juniper/Pulse Secure servers. 
 
-VPN connection flow is handled by `juniper-vpn-wrap.py`.  
+The VPN connection flow is handled by `juniper-vpn-wrap.py`.  
 The original version was patched to add support for 2FA via Duo Mobile (push mode).
 
 Feel free to submit issues and PR to improve it.
