@@ -1,4 +1,12 @@
-# Juniper / Pulse Secure VPN client
+# Juniper / Pulse Secure VPN client [ARCHIVED]
+
+This repo is archived and not supported.
+
+The `docksal/juniper-vpn` Docker image is up on Docker Hub, so you can try your luck using the instructions below.
+
+Note that every Juniper / Pulse Secure VPN **server** can be set up in a different way and thus may not be compatible with the setup in this repo.
+
+---
 
 Juniper / Pulse Secure VPN client packaged as a Docker image, thus can be used anywhere with Docker (Linux, macOS, Windows).
 
